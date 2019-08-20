@@ -1,10 +1,13 @@
 {
   "name": "Server",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "description": " the server for the face-detection app",
   "main": "script.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": " Ojo Temiloluwa A.K.A <CodeKagei>",
