@@ -37,4 +37,4 @@ app.put("/image", (req, res) => image.putImage(req, res, db));
 app.post("/imageUrl", (req, res) => image.handleApiCall(req, res));
 
 // start server
-app.listen(3000, () => console.log("i;m listening"));
+app.listen((process.env.PORT || 3000), () => console.log("i'm listening "));
