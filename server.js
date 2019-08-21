@@ -9,10 +9,8 @@ const image = require("./controllers/image");
 const db = require("knex")({
   client: "pg",
   connection: {
-    host: "postgresql-tetrahedral-16604",
-    user: "postgres",
-    password: "Tapooj@1997",
-    database: "facedetector"
+    host: process.env.DATABASE_URL,
+    ssl: true
   }
 });
 const bcrypt = require("bcrypt"),
