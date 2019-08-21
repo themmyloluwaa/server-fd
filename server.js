@@ -21,6 +21,8 @@ const bcrypt = require("bcrypt"),
 app.use(bodyParser.json());
 app.use(cors());
 
+// get data
+app.get("/", (req, res) => res.send("it is working "));
 // image endpoint
 app.post("/signin", (req, res) => signin.handleSignin(req, res, db, bcrypt));
 
@@ -37,4 +39,4 @@ app.put("/image", (req, res) => image.putImage(req, res, db));
 app.post("/imageUrl", (req, res) => image.handleApiCall(req, res));
 
 // start server
-app.listen((process.env.PORT || 3000), () => console.log("i'm listening "));
+app.listen(process.env.PORT || 3000, () => console.log("i'm listening "));
